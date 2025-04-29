@@ -71,14 +71,14 @@ def main():
         logger.log("Creating model and diffusion...")
 
     model, diffusion = create_model_and_diffusion(
-        **args_to_dict(args, model_and_diffusion_defaults().keys())
+        **args_to_dict(args, [key for key in model_and_diffusion_defaults().keys()])
     )
 
     device = torch.device(f"cuda:{local_rank}")
     model.to(device)
     #model = DDP(model, device_ids=[local_rank], output_device=local_rank)
     # Fix suggested here: https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
-    model = DDP(model)
+    #model = DDP(model)
 
     schedule_sampler = create_named_schedule_sampler(args.schedule_sampler, diffusion)
 

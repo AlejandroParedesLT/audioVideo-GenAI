@@ -1,0 +1,3156 @@
+compsci-cluster-fitz-33
+Sun Apr 27 11:09:52 PM EDT 2025
+Sun Apr 27 23:09:53 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   20C    P8             18W /  230W |       2MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   22C    P8             18W /  230W |       2MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   17C    P8             20W /  230W |       2MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   17C    P8             20W /  230W |       2MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+W0427 23:09:58.722000 1219937 torch/distributed/run.py:792] 
+W0427 23:09:58.722000 1219937 torch/distributed/run.py:792] *****************************************
+W0427 23:09:58.722000 1219937 torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0427 23:09:58.722000 1219937 torch/distributed/run.py:792] *****************************************
+0
+Logging to ./data10/concerts_audiovideo_dataset/debug/
+Print devices
+0,1,2,3
+GPUs per node 4
+Effective parameters:
+  <<< audio_attention_resolutions: -1
+  <<< audio_fps: 16000
+  <<< audio_size: [1, 25600]
+  <<< audio_type: 1d
+  <<< batch_size: 4
+  <<< channel_mult: 
+  <<< class_cond: False
+  <<< cross_attention_resolutions: 2,4,8
+  <<< cross_attention_shift: True
+  <<< cross_attention_windows: 1,4,8
+  <<< data_dir: ./data10/concerts_audiovideo_dataset/train/
+  <<< devices: 0,1,2,3
+  <<< diffusion_steps: 2000
+  <<< dropout: 0.1
+  <<< ema_rate: 0.9999
+  <<< fp16_scale_growth: 0.001
+  <<< frame_gap: 1
+  <<< learn_sigma: False
+  <<< log_interval: 100
+  <<< lr: 0.0001
+  <<< lr_anneal_steps: 0
+  <<< microbatch: -1
+  <<< noise_schedule: linear
+  <<< num_channels: 128
+  <<< num_head_channels: 64
+  <<< num_heads: 4
+  <<< num_heads_upsample: -1
+  <<< num_res_blocks: 2
+  <<< num_workers: 4
+  <<< output_dir: ./data10/concerts_audiovideo_dataset/debug/
+  <<< predict_xstart: False
+  <<< resblock_updown: True
+  <<< rescale_learned_sigmas: False
+  <<< rescale_timesteps: False
+  <<< resume_checkpoint: 
+  <<< sample_fn: ddpm
+  <<< save_interval: 2000
+  <<< save_type: mp4
+  <<< schedule_sampler: uniform
+  <<< seed: 42
+  <<< t_lr: 0.0001
+  <<< timestep_respacing: 
+  <<< use_checkpoint: False
+  <<< use_db: False
+  <<< use_fp16: True
+  <<< use_kl: False
+  <<< use_scale_shift_norm: True
+  <<< video_attention_resolutions: 2,4,8
+  <<< video_fps: 10
+  <<< video_size: [16, 3, 64, 64]
+  <<< video_type: 2d+1d
+  <<< weight_decay: 0.0
+Creating model and diffusion...
+2
+Logging to ./data10/concerts_audiovideo_dataset/debug/
+Print devices
+0,1,2,3
+GPUs per node 4
+1
+Logging to ./data10/concerts_audiovideo_dataset/debug/
+Print devices
+0,1,2,3
+GPUs per node 4
+3
+Logging to ./data10/concerts_audiovideo_dataset/debug/
+Print devices
+0,1,2,3
+GPUs per node 4
+Creating data loader...
+Sun Apr 27 23:10:15 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   22C    P2             33W /  230W |     725MiB /  23028MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   24C    P2             55W /  230W |     713MiB /  23028MiB |      5%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   19C    P2             56W /  230W |     709MiB /  23028MiB |      4%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   19C    P2             56W /  230W |     615MiB /  23028MiB |      3%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3        712MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3        716MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3        610MiB |
++-----------------------------------------------------------------------------------------+
+
+Sun Apr 27 23:10:15 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   22C    P2             39W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   24C    P2             55W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   19C    P2             56W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   19C    P2             57W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
++-----------------------------------------------------------------------------------------+
+
+Sun Apr 27 23:10:15 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   22C    P2             39W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   24C    P2             55W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   19C    P2             56W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   20C    P2             57W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
++-----------------------------------------------------------------------------------------+
+
+Sun Apr 27 23:10:16 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   23C    P2             62W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   24C    P2             56W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   19C    P2             57W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   20C    P2             57W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
++-----------------------------------------------------------------------------------------+
+
+Sun Apr 27 23:10:16 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   23C    P2             62W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   24C    P2             56W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   19C    P2             57W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   20C    P2             57W /  230W |     725MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3        718MiB |
++-----------------------------------------------------------------------------------------+
+
+continue training from step 6000
+loading model from checkpoint: ./data10/concerts_audiovideo_dataset/debug/model006000.pt...
+loading model from checkpoint: ./data10/concerts_audiovideo_dataset/debug/model006000.pt...
+loading model from checkpoint: ./data10/concerts_audiovideo_dataset/debug/model006000.pt...
+loading model from checkpoint: ./data10/concerts_audiovideo_dataset/debug/model006000.pt...
+compsci-cluster-fitz-33:1219942:1219942 [0] NCCL INFO Bootstrap : Using bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219942:1219942 [0] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+compsci-cluster-fitz-33:1219942:1219942 [0] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+compsci-cluster-fitz-33:1219942:1219942 [0] NCCL INFO NET/Plugin: Using internal network plugin.
+compsci-cluster-fitz-33:1219943:1219943 [1] NCCL INFO cudaDriverVersion 12040
+compsci-cluster-fitz-33:1219945:1219945 [3] NCCL INFO cudaDriverVersion 12040
+compsci-cluster-fitz-33:1219942:1219942 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.21.5+cuda12.4
+compsci-cluster-fitz-33:1219942:1219942 [0] NCCL INFO Comm config Blocking set to 1
+compsci-cluster-fitz-33:1219945:1219945 [3] NCCL INFO Bootstrap : Using bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219943:1219943 [1] NCCL INFO Bootstrap : Using bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219945:1219945 [3] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+compsci-cluster-fitz-33:1219943:1219943 [1] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+compsci-cluster-fitz-33:1219945:1219945 [3] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+compsci-cluster-fitz-33:1219945:1219945 [3] NCCL INFO NET/Plugin: Using internal network plugin.
+compsci-cluster-fitz-33:1219945:1219945 [3] NCCL INFO Comm config Blocking set to 1
+compsci-cluster-fitz-33:1219943:1219943 [1] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+compsci-cluster-fitz-33:1219943:1219943 [1] NCCL INFO NET/Plugin: Using internal network plugin.
+compsci-cluster-fitz-33:1219943:1219943 [1] NCCL INFO Comm config Blocking set to 1
+compsci-cluster-fitz-33:1219944:1219944 [2] NCCL INFO cudaDriverVersion 12040
+compsci-cluster-fitz-33:1219944:1219944 [2] NCCL INFO Bootstrap : Using bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219944:1219944 [2] NCCL INFO NET/Plugin: No plugin found (libnccl-net.so)
+compsci-cluster-fitz-33:1219944:1219944 [2] NCCL INFO NET/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-net.so
+compsci-cluster-fitz-33:1219944:1219944 [2] NCCL INFO NET/Plugin: Using internal network plugin.
+compsci-cluster-fitz-33:1219944:1219944 [2] NCCL INFO Comm config Blocking set to 1
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO NET/IB : No device found.
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO NET/Socket : Using [0]bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Using non-device net plugin version 0
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Using network Socket
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO NET/IB : No device found.
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO NET/Socket : Using [0]bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Using non-device net plugin version 0
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Using network Socket
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO NET/IB : No device found.
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO NET/IB : No device found.
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO NET/Socket : Using [0]bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Using non-device net plugin version 0
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Using network Socket
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO NET/Socket : Using [0]bond0:10.138.29.90<0>
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Using non-device net plugin version 0
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Using network Socket
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO ncclCommInitRank comm 0x55a57a931030 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 17000 commId 0x45e1577239153808 - Init START
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO ncclCommInitRank comm 0x55ed9f1fd130 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 31000 commId 0x45e1577239153808 - Init START
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO ncclCommInitRank comm 0x55c698c99cc0 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId b1000 commId 0x45e1577239153808 - Init START
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO ncclCommInitRank comm 0x55bb6cb559b0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId ca000 commId 0x45e1577239153808 - Init START
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO NVLS multicast support is not available on dev 2
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO NVLS multicast support is not available on dev 3
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Setting affinity for GPU 0 to 01,00000001
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO NVLS multicast support is not available on dev 0
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Setting affinity for GPU 1 to 01,00000001
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO NVLS multicast support is not available on dev 1
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO comm 0x55a57a931030 rank 0 nRanks 4 nNodes 1 localRanks 4 localRank 0 MNNVL 0
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO comm 0x55ed9f1fd130 rank 1 nRanks 4 nNodes 1 localRanks 4 localRank 1 MNNVL 0
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Channel 00/02 :    0   1   2   3
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Channel 01/02 :    0   1   2   3
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO P2P Chunksize set to 131072
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO P2P Chunksize set to 131072
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO comm 0x55c698c99cc0 rank 2 nRanks 4 nNodes 1 localRanks 4 localRank 2 MNNVL 0
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO P2P Chunksize set to 131072
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO comm 0x55bb6cb559b0 rank 3 nRanks 4 nNodes 1 localRanks 4 localRank 3 MNNVL 0
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO P2P Chunksize set to 131072
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Channel 00 : 2[2] -> 3[3] via SHM/direct/direct
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Channel 00 : 1[1] -> 2[2] via SHM/direct/direct
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Channel 01 : 1[1] -> 2[2] via SHM/direct/direct
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Channel 01 : 2[2] -> 3[3] via SHM/direct/direct
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Channel 00 : 3[3] -> 0[0] via SHM/direct/direct
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Channel 01 : 3[3] -> 0[0] via SHM/direct/direct
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Connected all rings
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Connected all rings
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Channel 00 : 3[3] -> 2[2] via SHM/direct/direct
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Channel 01 : 3[3] -> 2[2] via SHM/direct/direct
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Connected all rings
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Connected all rings
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Channel 00 : 2[2] -> 1[1] via SHM/direct/direct
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Channel 01 : 2[2] -> 1[1] via SHM/direct/direct
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO Connected all trees
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO Connected all trees
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO Connected all trees
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO Connected all trees
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO TUNER/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+compsci-cluster-fitz-33:1219943:1220043 [1] NCCL INFO ncclCommInitRank comm 0x55ed9f1fd130 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 31000 commId 0x45e1577239153808 - Init COMPLETE
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO TUNER/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+compsci-cluster-fitz-33:1219945:1220042 [3] NCCL INFO ncclCommInitRank comm 0x55bb6cb559b0 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId ca000 commId 0x45e1577239153808 - Init COMPLETE
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO TUNER/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+compsci-cluster-fitz-33:1219944:1220044 [2] NCCL INFO ncclCommInitRank comm 0x55c698c99cc0 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId b1000 commId 0x45e1577239153808 - Init COMPLETE
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO TUNER/Plugin: Plugin load returned 2 : libnccl-net.so: cannot open shared object file: No such file or directory : when loading libnccl-tuner.so
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO TUNER/Plugin: Using internal tuner plugin.
+compsci-cluster-fitz-33:1219942:1220041 [0] NCCL INFO ncclCommInitRank comm 0x55a57a931030 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 17000 commId 0x45e1577239153808 - Init COMPLETE
+loading optimizer state from checkpoint: ./data10/concerts_audiovideo_dataset/debug/opt006000.pt
+loading optimizer state from checkpoint: ./data10/concerts_audiovideo_dataset/debug/opt006000.pt
+loading optimizer state from checkpoint: ./data10/concerts_audiovideo_dataset/debug/opt006000.pt
+loading optimizer state from checkpoint: ./data10/concerts_audiovideo_dataset/debug/opt006000.pt
+loading EMA from checkpoint: ./data10/concerts_audiovideo_dataset/debug/ema_0.9999_006000.pt...
+loading EMA from checkpoint: ./data10/concerts_audiovideo_dataset/debug/ema_0.9999_006000.pt...loading EMA from checkpoint: ./data10/concerts_audiovideo_dataset/debug/ema_0.9999_006000.pt...
+loading EMA from checkpoint: ./data10/concerts_audiovideo_dataset/debug/ema_0.9999_006000.pt...
+
+Total Parameters:133.68MTotal Parameters:133.68MTotal Parameters:133.68M
+Total Training Parameters:133.68M
+Total Loaded Parameters:133.68M
+Total Parameters:133.68M
+Total Training Parameters:133.68M
+
+Total Loaded Parameters:133.68M
+Total Training Parameters:133.68M
+Total Loaded Parameters:133.68M
+
+Total Training Parameters:133.68M
+Total Loaded Parameters:133.68M
+******DDP sync model done...******DDP sync model done...******DDP sync model done...
+
+******DDP sync model done...
+
+Sun Apr 27 23:10:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   26C    P2             63W /  230W |    4467MiB /  23028MiB |     20%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   27C    P2             56W /  230W |    4467MiB /  23028MiB |     15%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   22C    P2             57W /  230W |    4467MiB /  23028MiB |      4%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   22C    P2             57W /  230W |    4467MiB /  23028MiB |     20%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
++-----------------------------------------------------------------------------------------+
+
+len(data loader):952
+load ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl...
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/datasets/video_utils.py:219: UserWarning: There aren't enough frames in the current video to get a clip for the given clip length and frames between clips. The video (and potentially others) will be skipped.
+  warnings.warn(
+load 271331 video clips from ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl......
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+Sun Apr 27 23:10:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   26C    P2             63W /  230W |    4467MiB /  23028MiB |     20%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   27C    P2             56W /  230W |    4467MiB /  23028MiB |     15%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   22C    P2             57W /  230W |    4467MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   22C    P2             58W /  230W |    4467MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
++-----------------------------------------------------------------------------------------+
+
+load ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl...
+Sun Apr 27 23:10:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   26C    P2             63W /  230W |    4467MiB /  23028MiB |     20%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   27C    P2             56W /  230W |    4467MiB /  23028MiB |     15%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   22C    P2             57W /  230W |    4467MiB /  23028MiB |     34%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   22C    P2             58W /  230W |    4467MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
++-----------------------------------------------------------------------------------------+
+
+Sun Apr 27 23:10:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A5000               Off |   00000000:17:00.0 Off |                    0 |
+| 30%   26C    P2             63W /  230W |    4467MiB /  23028MiB |     20%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA RTX A5000               Off |   00000000:31:00.0 Off |                    0 |
+| 30%   27C    P2             56W /  230W |    4467MiB /  23028MiB |     15%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA RTX A5000               Off |   00000000:B1:00.0 Off |                    0 |
+| 30%   22C    P2             58W /  230W |    4467MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA RTX A5000               Off |   00000000:CA:00.0 Off |                    0 |
+| 30%   22C    P2             58W /  230W |    4467MiB /  23028MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   1219942      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    1   N/A  N/A   1219943      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    2   N/A  N/A   1219944      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
+|    3   N/A  N/A   1219945      C   ...90-text2audiovideo/venv/bin/python3       4460MiB |
++-----------------------------------------------------------------------------------------+
+
+load ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl...
+load ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl...
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/datasets/video_utils.py:219: UserWarning: There aren't enough frames in the current video to get a clip for the given clip length and frames between clips. The video (and potentially others) will be skipped.
+  warnings.warn(
+load 271331 video clips from ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl......
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/datasets/video_utils.py:219: UserWarning: There aren't enough frames in the current video to get a clip for the given clip length and frames between clips. The video (and potentially others) will be skipped.
+  warnings.warn(
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/datasets/video_utils.py:219: UserWarning: There aren't enough frames in the current video to get a clip for the given clip length and frames between clips. The video (and potentially others) will be skipped.
+  warnings.warn(
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+load 271331 video clips from ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl......
+load 271331 video clips from ./data10/concerts_audiovideo_dataset/train/video_clip_f16_g1_r10.pkl......
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torchvision/io/video.py:197: UserWarning: The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.
+  warnings.warn("The pts_unit 'pts' gives wrong results. Please use pts_unit 'sec'.")
+torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+mmco: unref short failure
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 3, 64, 64])
+
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 128, 25600])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 16, 896, 16, 16])
+
+torch.Size([4, 896, 1600])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 896, 1600])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 128, 25600])torch.Size([4, 768, 1600])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])torch.Size([4, 128, 25600])
+torch.Size([4, 768, 1600])
+
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 128, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 512, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 512, 400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 256, 6400])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 400])torch.Size([4, 16, 256, 64, 64])
+
+
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 3, 64, 64])
+
+torch.Size([4, 128, 25600])torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 384, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 1024, 400])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 896, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 512, 400])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+
+torch.Size([4, 128, 25600])torch.Size([4, 640, 1600])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 128, 32, 32])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+
+torch.Size([4, 768, 1600])torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 128, 32, 32])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 640, 6400])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])torch.Size([4, 512, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 16, 16])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])torch.Size([4, 256, 1600])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 256, 64, 64])
+
+torch.Size([4, 256, 25600])torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 16, 384, 64, 64])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 25600])
+torch.Size([4, 256, 1600])
+torch.Size([4, 384, 1600])
+
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 256, 6400])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 64, 64])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+
+torch.Size([4, 256, 25600])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 384, 8, 8])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 384, 400])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 1600])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 256, 6400])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 640, 6400])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])torch.Size([4, 256, 6400])
+
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 3, 64, 64])torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 1, 25600])
+
+torch.Size([4, 1, 25600])torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 128, 25600])
+
+torch.Size([4, 128, 25600])torch.Size([4, 128, 25600])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 128, 6400])
+torch.Size([4, 128, 25600])torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 128, 6400])
+
+torch.Size([4, 16, 128, 32, 32])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 128, 25600])torch.Size([4, 128, 6400])
+
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 6400])torch.Size([4, 128, 25600])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 128, 6400])torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 16, 16])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 384, 1600])
+
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 400])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 8, 8])
+
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])torch.Size([4, 16, 384, 8, 8])torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])torch.Size([4, 384, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 384, 400])
+
+torch.Size([4, 384, 400])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+
+
+torch.Size([4, 384, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 1024, 8, 8])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 1024, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 1024, 8, 8])torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 16, 16])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 768, 1600])
+
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 768, 16, 16])
+
+torch.Size([4, 768, 1600])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+
+torch.Size([4, 640, 6400])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+
+torch.Size([4, 384, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 16, 640, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 640, 6400])
+
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+
+torch.Size([4, 512, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 64, 64])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 128, 25600])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 384, 64, 64])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 128, 25600])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 256, 25600])torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 3, 64, 64])torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 3, 64, 64])
+torch.Size([4, 1, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 1, 25600])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 64, 64])
+
+torch.Size([4, 128, 25600])torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 32, 32])torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 128, 32, 32])torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 16, 128, 32, 32])
+torch.Size([4, 128, 6400])
+
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 256, 16, 16])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 256, 1600])
+
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 256, 1600])
+
+torch.Size([4, 16, 256, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 256, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 16, 16])
+torch.Size([4, 256, 1600])
+
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 384, 8, 8])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 384, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 8, 8])
+torch.Size([4, 384, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 1024, 400])
+
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 16, 1024, 8, 8])torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+
+torch.Size([4, 1024, 400])torch.Size([4, 1024, 400])
+
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 1024, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 400])torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])torch.Size([4, 16, 512, 8, 8])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 1024, 8, 8])
+torch.Size([4, 1024, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 896, 8, 8])
+
+torch.Size([4, 896, 1600])
+torch.Size([4, 896, 400])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 512, 16, 16])
+torch.Size([4, 512, 1600])torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])torch.Size([4, 16, 512, 16, 16])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+
+torch.Size([4, 512, 1600])torch.Size([4, 896, 1600])
+
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+torch.Size([4, 16, 512, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 512, 1600])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 768, 1600])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 16, 896, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 896, 1600])
+
+torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 16, 640, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 768, 1600])
+torch.Size([4, 640, 1600])
+
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+
+torch.Size([4, 384, 1600])torch.Size([4, 384, 1600])
+
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 16, 768, 16, 16])
+torch.Size([4, 640, 1600])
+torch.Size([4, 768, 1600])
+
+torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 384, 1600])torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 640, 1600])
+
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 16, 384, 16, 16])torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 640, 16, 16])
+torch.Size([4, 640, 1600])
+
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 16, 640, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 384, 1600])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 640, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 640, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 640, 6400])
+
+torch.Size([4, 16, 512, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 512, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 25600])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 256, 6400])
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 512, 6400])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 384, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 384, 6400])
+
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 16, 512, 32, 32])
+torch.Size([4, 256, 25600])
+torch.Size([4, 512, 6400])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+
+torch.Size([4, 256, 6400])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 384, 32, 32])
+
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+
+torch.Size([4, 256, 6400])torch.Size([4, 128, 25600])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 16, 384, 32, 32])
+
+torch.Size([4, 384, 25600])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 384, 6400])
+torch.Size([4, 16, 256, 64, 64])
+
+torch.Size([4, 256, 25600])
+
+torch.Size([4, 128, 25600])torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+
+torch.Size([4, 256, 25600])torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 384, 64, 64])
+torch.Size([4, 384, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])torch.Size([4, 16, 256, 32, 32])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+torch.Size([4, 16, 256, 64, 64])
+torch.Size([4, 256, 25600])
+torch.Size([4, 16, 128, 64, 64])
+torch.Size([4, 128, 25600])
+
+torch.Size([4, 256, 6400])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_train_multiprocessing.py", line 154, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_train_multiprocessing.py", line 115, in main
+[rank1]:     ).run_loop()
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 252, in run_loop
+[rank1]:     loss = self.run_step(batch)
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 290, in run_step
+[rank1]:     loss = self.forward_backward(batch, cond)
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 340, in forward_backward
+[rank1]:     self.mp_trainer.backward(loss)
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/fp16_util.py", line 184, in backward
+[rank1]:     (loss * loss_scale).backward()
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+[rank1]:     torch.autograd.backward(
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank1]:     _engine_run_backward(
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank1]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/function.py", line 307, in apply
+[rank1]:     return user_fn(self, *args)
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/nn.py", line 270, in backward
+[rank1]:     input_grads = th.autograd.grad(
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 496, in grad
+[rank1]:     result = _engine_run_backward(
+[rank1]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank1]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1024.00 MiB. GPU 1 has a total capacity of 22.18 GiB of which 621.44 MiB is free. Including non-PyTorch memory, this process has 21.57 GiB memory in use. Of the allocated memory 15.71 GiB is allocated by PyTorch, and 5.48 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_train_multiprocessing.py", line 154, in <module>
+[rank3]:     main()
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_train_multiprocessing.py", line 115, in main
+[rank3]:     ).run_loop()
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 252, in run_loop
+[rank3]:     loss = self.run_step(batch)
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 290, in run_step
+[rank3]:     loss = self.forward_backward(batch, cond)
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 340, in forward_backward
+[rank3]:     self.mp_trainer.backward(loss)
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/fp16_util.py", line 184, in backward
+[rank3]:     (loss * loss_scale).backward()
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+[rank3]:     torch.autograd.backward(
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank3]:     _engine_run_backward(
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank3]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/function.py", line 307, in apply
+[rank3]:     return user_fn(self, *args)
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/nn.py", line 270, in backward
+[rank3]:     input_grads = th.autograd.grad(
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 496, in grad
+[rank3]:     result = _engine_run_backward(
+[rank3]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank3]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1024.00 MiB. GPU 3 has a total capacity of 22.18 GiB of which 621.44 MiB is free. Including non-PyTorch memory, this process has 21.57 GiB memory in use. Of the allocated memory 15.71 GiB is allocated by PyTorch, and 5.48 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_train_multiprocessing.py", line 154, in <module>
+[rank2]:     main()
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_train_multiprocessing.py", line 115, in main
+[rank2]:     ).run_loop()
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 252, in run_loop
+[rank2]:     loss = self.run_step(batch)
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 290, in run_step
+[rank2]:     loss = self.forward_backward(batch, cond)
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/multimodal_train_util.py", line 340, in forward_backward
+[rank2]:     self.mp_trainer.backward(loss)
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/fp16_util.py", line 184, in backward
+[rank2]:     (loss * loss_scale).backward()
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+[rank2]:     torch.autograd.backward(
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank2]:     _engine_run_backward(
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank2]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/function.py", line 307, in apply
+[rank2]:     return user_fn(self, *args)
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/nn.py", line 270, in backward
+[rank2]:     input_grads = th.autograd.grad(
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 496, in grad
+[rank2]:     result = _engine_run_backward(
+[rank2]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank2]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1024.00 MiB. GPU 2 has a total capacity of 22.18 GiB of which 763.44 MiB is free. Including non-PyTorch memory, this process has 21.43 GiB memory in use. Of the allocated memory 16.71 GiB is allocated by PyTorch, and 4.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 512, 8, 8])
+torch.Size([4, 512, 400])
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+compsci-cluster-fitz-33:1219943:1220047 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+compsci-cluster-fitz-33:1219945:1220052 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+torch.Size([4, 16, 384, 16, 16])
+torch.Size([4, 384, 1600])
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+compsci-cluster-fitz-33:1219944:1220050 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+torch.Size([4, 16, 256, 32, 32])
+torch.Size([4, 256, 6400])
+compsci-cluster-fitz-33:1219943:1221892 [1] NCCL INFO comm 0x55ed9f1fd130 rank 1 nranks 4 cudaDev 1 busId 31000 - Abort COMPLETE
+compsci-cluster-fitz-33:1219945:1221893 [3] NCCL INFO comm 0x55bb6cb559b0 rank 3 nranks 4 cudaDev 3 busId ca000 - Abort COMPLETE
+compsci-cluster-fitz-33:1219944:1221894 [2] NCCL INFO comm 0x55c698c99cc0 rank 2 nranks 4 cudaDev 2 busId b1000 - Abort COMPLETE
+W0427 23:12:14.721000 1219937 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1219942 closing signal SIGTERM
+W0427 23:12:14.725000 1219937 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1219945 closing signal SIGTERM
+slurmstepd: error: *** JOB 8921667 ON compsci-cluster-fitz-33 CANCELLED AT 2025-04-27T23:12:41 ***
+slurmstepd: error: *** STEP 8921667.3 ON compsci-cluster-fitz-33 CANCELLED AT 2025-04-27T23:12:41 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

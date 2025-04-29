@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 30:00:00  # time requested in hour:minute:second
+#SBATCH -t 72:00:00  # time requested in hour:minute:second
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:4
 #SBATCH --constraint=a5000

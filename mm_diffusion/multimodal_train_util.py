@@ -157,8 +157,6 @@ class TrainLoop:
             )
             print("******DDP sync model done...")
             dist_util.check_nvidia_smi()
-           
-       
         else:
             if dist.get_world_size() > 1:
                 logger.warn(

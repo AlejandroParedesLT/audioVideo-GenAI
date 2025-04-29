@@ -18,8 +18,11 @@ MODEL_FLAGS="--cross_attention_resolutions 2,4,8  --cross_attention_windows 1,4,
 --cross_attention_shift True  --video_attention_resolutions 2,4,8
 --audio_attention_resolutions -1
 --video_size 16,3,64,64 --audio_size 1,25600 --learn_sigma False --num_channels 128 
---num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True
+--num_head_channels 64 --num_res_blocks 2 --resblock_updown True
 --use_scale_shift_norm True"
+
+#  --use_fp16 True
+
 
 SRMODEL_FLAGS="--sr_attention_resolutions 8,16,32  --large_size 256  
 --small_size 64 --sr_learn_sigma True 
@@ -34,9 +37,13 @@ DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule linear
 SR_DIFFUSION_FLAGS="--sr_diffusion_steps 1000  --sr_sample_fn ddim  --sr_timestep_respacing ddim25"
 
 # Modify the following paths to your own paths
-MULTIMODAL_MODEL_PATH="./data10/call_of_duty/debug/model002000.pt"
+#MULTIMODAL_MODEL_PATH="./data10/call_of_duty/debug/model002000.pt"
+MULTIMODAL_MODEL_PATH="./data10/call_of_duty/debug/model007000.pt"
+# /data10/call_of_duty/debug/model005000.pt
+# /model007000.pt
+
 SR_MODEL_PATH="./data10/models/AIST++_SR.pt"
-OUT_DIR="./data10/call_of_duty/out"
+OUT_DIR="./data10/call_of_duty/out_5000"
 REF_PATH="./data10/call_of_duty/test"
 
 # --use-hwthread-cpus

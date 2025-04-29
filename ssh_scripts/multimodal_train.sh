@@ -1,9 +1,9 @@
 #! /bin/bash
 
-MASTER_ADDR=localhost
+MASTER_ADDR=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)
 MASTER_PORT=${2-2012}
-NNODES=1
-NODE_RANK=0
+NNODES=${SLURM_NNODES}
+NODE_RANK=${SLURM_NODEID}
 GPUS_PER_NODE=4
 BASE_PATH=${1-"."}
 
@@ -23,14 +23,12 @@ MODEL_FLAGS="--cross_attention_resolutions 2,4,8 --cross_attention_windows 1,4,8
 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True 
 --use_scale_shift_norm True --num_workers 4"
 
-# --use_fp16 True 
-
 # Modify --devices to your own GPU ID
 TRAIN_FLAGS="--lr 0.0001 --batch_size 4 
---devices 0,1,2,3 --log_interval 100 --save_interval 1000 --use_db False " #--schedule_sampler loss-second-moment
+--devices 0,1,2,3 --log_interval 100 --save_interval 500 --use_db False " #--schedule_sampler loss-second-moment
 
 
-DIFFUSION_FLAGS="--noise_schedule linear --diffusion_steps 1000 --save_type mp4 --sample_fn ddpm" 
+DIFFUSION_FLAGS="--noise_schedule linear --diffusion_steps 100 --save_type mp4 --sample_fn ddpm" 
 
 # Modify the following pathes to your own paths
 # DATA_DIR="./data10/AIST++_crop/train/"
