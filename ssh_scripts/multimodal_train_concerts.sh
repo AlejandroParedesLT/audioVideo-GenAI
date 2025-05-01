@@ -30,11 +30,6 @@ TRAIN_FLAGS="--lr 0.0001 --batch_size 4
 
 DIFFUSION_FLAGS="--noise_schedule linear --diffusion_steps 2000 --save_type mp4 --sample_fn ddpm" 
 
-# Modify the following pathes to your own paths
-# DATA_DIR="./data10/AIST++_crop/train/"
-# OUTPUT_DIR="./data10/debug"
-# data10/concerts_audiovideo_dataset/train
-
 DATA_DIR="./data10/concerts_audiovideo_dataset/train/"
 OUTPUT_DIR="./data10/concerts_audiovideo_dataset/debug/"
 

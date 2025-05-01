@@ -131,3 +131,14 @@ dmypy.json
 data10/
 
 .env
+
+audiovid_venv
+.env
+__pycache__/
+weights/
+diffusers/
+ext_weights/
+dataset/
+logs/
+*.log
+*.out

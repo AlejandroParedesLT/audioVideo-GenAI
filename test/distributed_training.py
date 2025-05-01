@@ -41,7 +41,9 @@ def cleanup():
 
 def train(rank, world_size, epochs=1):
     setup(rank, world_size)
-
+    print(f"Rank {rank} is training...")
+    print(f"World size: {world_size}")
+    print(torch.distributed.get_world_size())
     # Create dataset and dataloaders
     dataset = SimpleDataset()
     train_sampler = torch.utils.data.DistributedSampler(dataset, num_replicas=world_size, rank=rank)
@@ -69,6 +71,7 @@ def train(rank, world_size, epochs=1):
     cleanup()
 
 if __name__ == "__main__":
+    print("Starting distributed training...")
     parser = argparse.ArgumentParser()
     parser.add_argument("--rank", type=int, help="Rank of this node in distributed setup", required=True)
     parser.add_argument("--world_size", type=int, help="Total number of processes", required=True)

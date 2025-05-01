@@ -1,10 +1,27 @@
 # Multimodal Diffusion Model for Audio-Video Generation
 
-This repository contains an implementation of a diffusion-based model for generating synchronized audio-video content. The project leverages distributed training for scalability and supports super-resolution enhancement of generated videos.
+This repository provides an implementation of advanced multimodal diffusion frameworks for synchronized audio-video generation, including MM-Diffusion and a novel two-step sequential pipeline combining CogVideoX for video and MM-Audio for audio generation.
+
+The work builds upon cutting-edge research in multimodal generative modeling and proposes new methods, datasets, and evaluation benchmarks for high-fidelity and temporally aligned audio-visual synthesis.
+
+🚀 Highlights
+📦 Two new datasets released:
+
+🎮 Call of Duty Game Dataset (13 hrs)
+
+🎤 Concerts Around the Globe Dataset (64 hrs)
+
+🌀 MM-Diffusion trained from scratch on curated datasets for joint audio-video generation
+
+🧩 Latent MM-Diffusion experiments using pretrained audio and video VAE backbones
+
+🔁 Two-step text → video → audio pipeline using CogVideoX and MM-Audio for aligned synthesis
+
+📊 Evaluated with Fréchet Audio Distance (FAD) and Fréchet Video Distance (FVD)
 
 ## Overview
 
-This multimodal diffusion model is designed to:
+The joint multimodal diffusion model (MM-Diffusion) is designed to:
 - Generate synchronized video and audio pairs
 - Train on distributed systems using PyTorch's DistributedDataParallel
 - Support super-resolution enhancement of generated videos
@@ -14,11 +31,6 @@ This multimodal diffusion model is designed to:
 
 - **Multimodal Generation**: Creates coherent audio-video pairs where content is synchronized
 - **Distributed Training**: Scales across multiple GPUs using NCCL backend
-- **Flexible Sampling Methods**: Supports various diffusion samplers including:
-  - DPM-Solver
-  - DPM-Solver++ (with adaptive stepping)
-  - DDPM
-  - DDIM
 - **Super-Resolution**: Optional video enhancement to upscale low-resolution outputs
 - **Evaluation**: Built-in metrics for content quality assessment
 
@@ -27,81 +39,37 @@ This multimodal diffusion model is designed to:
 ```bash
 # Clone the repository
 git clone https://github.com/AlejandroParedesLT/audioVideo-GenAI.git
-cd multimodal-diffusion
+cd audioVideo-GenAI
 
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies Ideally use two different virtual environments
+pip install -r requirements_sequentialDiffusion.txt
+pip install -r requirements_unconditionalDiffusion.txt
 ```
-
-### Requirements
-
-- PyTorch with CUDA support
-- torchvision
-- einops
-- debugpy (for debugging)
-- numpy
-- scikit-image
-- matplotlib
 
 ## Usage
 
 ### Training
 
+For each of the .sh files named cluster replace the virtual environment directory: export VENV_DIR=$HOME/finalCS590-text2audiovideo/venv according to your needs
+
 To train the multimodal diffusion model:
 
 ```bash
-torchrun --nproc_per_node=N multimodal_train_multiprocessing.py \
-  --data_dir /path/to/data \
-  --output_dir /path/to/output \
-  --batch_size 16 \
-  --num_workers 4 \
-  --video_size 16,3,64,64 \
-  --audio_size 16,1,44100 \
-  --video_fps 10 \
-  --audio_fps 16000 \
-  --lr 1e-4 \
-  --t_lr 1e-4 \
-  --save_interval 10000 \
-  --log_interval 100 \
-  --sample_fn dpm_solver
+sbatch cluster_audioVideo_concerts.sh && JID=`squeue -u $USER -h -o%A` && sleep 5 && head slurm-$JID.out --lines=25
 ```
-
-Where `N` is the number of GPUs to use.
 
 ### Sampling/Inference
 
-To generate audio-video pairs with the trained model:
+To generate audio-video pairs with the trained model simply uncomment the following line in the file cluster_audioVideo_concerts.sh:
 
 ```bash
-torchrun --nproc_per_node=N multimodal_sample_sr_multiprocessing.py \
-  --multimodal_model_path /path/to/model.pt \
-  --output_dir /path/to/output \
-  --batch_size 16 \
-  --sample_fn dpm_solver \
-  --sr_sample_fn dpm_solver \
-  --video_size 16,3,64,64 \
-  --audio_size 16,1,44100 \
-  --video_fps 10 \
-  --audio_fps 16000 \
-  --all_save_num 1024
+# srun bash -c "source $VENV_DIR/bin/activate && bash ./ssh_scripts/multimodal_sample_sr_concerts.sh"
 ```
 
-To run with super-resolution enhancement, add the SR model path:
+To run the two-step audio video generation:
 
 ```bash
-torchrun --nproc_per_node=N multimodal_sample_sr_multiprocessing.py \
-  --multimodal_model_path /path/to/model.pt \
-  --sr_model_path /path/to/sr_model.pt \
-  --large_size 256 \
-  --output_dir /path/to/output \
-  --batch_size 16 \
-  --sample_fn dpm_solver \
-  --sr_sample_fn dpm_solver \
-  --video_size 16,3,64,64 \
-  --audio_size 16,1,44100 \
-  --video_fps 10 \
-  --audio_fps 16000 \
-  --all_save_num 1024
+sbatch cluster_audioVideo_concerts.sh && JID=`squeue -u $USER -h -o%A` && sleep 5 && head slurm-$JID.out --lines=25
 ```
 
 ## Parameters
@@ -151,23 +119,6 @@ output_dir/
       └── img/              # Individual video frames
 ```
 
-## Sampling Methods
-
-The model supports different diffusion sampling methods:
-
-1. **DPM-Solver**: Fast sampling with better quality/speed trade-off
-   - Default steps: 20
-   - Order: 2-3
-
-2. **DPM-Solver++**: Enhanced version with thresholding and adaptive stepping
-   - Supports predict_x0 mode
-   - Adaptive step size
-
-3. **DDPM**: Original diffusion sampling method
-   - Slower but sometimes more stable
-
-4. **DDIM**: Denoising Diffusion Implicit Models
-   - Faster than DDPM with controllable quality
 
 ## Distributed Training
 
@@ -187,7 +138,7 @@ The optional super-resolution model can enhance the quality of generated videos:
 
 ## Acknowledgements
 
-This implementation is from the paper
+This implementation was forked from the paper
 
 @misc{ruan2023mmdiffusionlearningmultimodaldiffusion,
       title={MM-Diffusion: Learning Multi-Modal Diffusion Models for Joint Audio and Video Generation}, 

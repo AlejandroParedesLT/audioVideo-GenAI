@@ -1,214 +1,0 @@
-compsci-cluster-fitz-08
-Mon Apr 28 07:40:30 PM EDT 2025
-Mon Apr 28 19:40:30 2025       
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 550.127.08             Driver Version: 550.127.08     CUDA Version: 12.4     |
-|-----------------------------------------+------------------------+----------------------+
-| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA RTX A6000               Off |   00000000:CA:00.0 Off |                  Off |
-| 30%   20C    P8             16W /  300W |       2MiB /  49140MiB |      0%      Default |
-|                                         |                        |                  N/A |
-+-----------------------------------------+------------------------+----------------------+
-                                                                                         
-+-----------------------------------------------------------------------------------------+
-| Processes:                                                                              |
-|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
-|        ID   ID                                                               Usage      |
-|=========================================================================================|
-|  No running processes found                                                             |
-+-----------------------------------------------------------------------------------------+
-Started script
-Checkpoint 1
-Checkpoint 2
-Checkpoint 3
-Checkpoint 4
-Checkpoint 5
-Checkpoint 6
-Checkpoint 7
-Started main
-0
-Executing model_diffusion default
-Executing image sr
-Reaching this point
-GPUs per node 1
-Pass config
-Logging to ./data10/concerts_audiovideo_dataset/model012000_out
-Effective parameters:
-  <<< all_save_num: 64
-  <<< audio_attention_resolutions: -1
-  <<< audio_fps: 16000
-  <<< audio_size: [1, 25600]
-  <<< audio_type: 1d
-  <<< batch_size: 4
-  <<< channel_mult: 
-  <<< class_cond: False
-  <<< classifier_scale: 0
-  <<< clip_denoised: True
-  <<< cross_attention_resolutions: 2,4,8
-  <<< cross_attention_shift: True
-  <<< cross_attention_windows: 1,4,8
-  <<< devices: 0
-  <<< diffusion_steps: 1000
-  <<< dropout: 0.0
-  <<< is_strict: True
-  <<< large_size: 256
-  <<< learn_sigma: False
-  <<< load_noise: 
-  <<< multimodal_model_path: ./data10/concerts_audiovideo_dataset/debug/model012000.pt
-  <<< noise_schedule: linear
-  <<< num_channels: 128
-  <<< num_head_channels: 64
-  <<< num_heads: 4
-  <<< num_heads_upsample: -1
-  <<< num_res_blocks: 2
-  <<< output_dir: ./data10/concerts_audiovideo_dataset/model012000_out
-  <<< predict_xstart: False
-  <<< ref_path: ./data10/concerts_audiovideo_dataset/unittest
-  <<< resblock_updown: True
-  <<< rescale_learned_sigmas: False
-  <<< rescale_timesteps: False
-  <<< sample_fn: dpm_solver
-  <<< save_type: mp4
-  <<< seed: 42
-  <<< small_size: 64
-  <<< sr_attention_resolutions: 8,16,32
-  <<< sr_class_cond: False
-  <<< sr_diffusion_steps: 1000
-  <<< sr_dropout: 0.0
-  <<< sr_learn_sigma: True
-  <<< sr_model_path: ./data10/models/AIST++_SR.pt
-  <<< sr_num_channels: 192
-  <<< sr_num_head_channels: -1
-  <<< sr_num_heads: 4
-  <<< sr_num_heads_upsample: -1
-  <<< sr_num_res_blocks: 2
-  <<< sr_resblock_updown: True
-  <<< sr_sample_fn: ddim
-  <<< sr_timestep_respacing: ddim25
-  <<< sr_use_scale_shift_norm: True
-  <<< timestep_respacing: 
-  <<< use_checkpoint: False
-  <<< use_fp16: True
-  <<< use_kl: False
-  <<< use_scale_shift_norm: True
-  <<< video_attention_resolutions: 2,4,8
-  <<< video_fps: 10
-  <<< video_size: [16, 3, 64, 64]
-  <<< video_type: 2d+1d
-creating model and diffusion...
-Pass model extract
-Pass model image sr
-Pass model list
-models waiting to be evaluated:['./data10/concerts_audiovideo_dataset/debug/model012000.pt']
-Model path for the state dict ./data10/concerts_audiovideo_dataset/debug/model012000.pt
-sampling samples for ./data10/concerts_audiovideo_dataset/debug/model012000.pt
-MoviePy - Building video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_0.mp4.
-MoviePy - Writing audio in dpm_solver_samples_0_0_0TEMP_MPY_wvf_snd.mp3
-MoviePy - Done.
-MoviePy - Writing video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_0.mp4
-
-MoviePy - Done !
-MoviePy - video ready ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_0.mp4
-MoviePy - Writing audio in ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/audios/dpm_solver_samples_0_0_0.wav
-MoviePy - Done.
-MoviePy - Building video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_1.mp4.
-MoviePy - Writing audio in dpm_solver_samples_0_0_1TEMP_MPY_wvf_snd.mp3
-MoviePy - Done.
-MoviePy - Writing video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_1.mp4
-
-MoviePy - Done !
-MoviePy - video ready ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_1.mp4
-MoviePy - Writing audio in ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/audios/dpm_solver_samples_0_0_1.wav
-MoviePy - Done.
-MoviePy - Building video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_2.mp4.
-MoviePy - Writing audio in dpm_solver_samples_0_0_2TEMP_MPY_wvf_snd.mp3
-MoviePy - Done.
-MoviePy - Writing video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_2.mp4
-
-MoviePy - Done !
-MoviePy - video ready ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_2.mp4
-MoviePy - Writing audio in ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/audios/dpm_solver_samples_0_0_2.wav
-chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       frame_index:   0%|          | 0/16 [00:00<?, ?it/s, now=None]                                                             chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       frame_index:   0%|          | 0/16 [00:00<?, ?it/s, now=None]                                                             chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       frame_index:   0%|          | 0/16 [00:00<?, ?it/s, now=None]                                                             chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                           MoviePy - Done.
-MoviePy - Building video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_3.mp4.
-MoviePy - Writing audio in dpm_solver_samples_0_0_3TEMP_MPY_wvf_snd.mp3
-MoviePy - Done.
-MoviePy - Writing video ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_3.mp4
-
-MoviePy - Done !
-MoviePy - video ready ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/original/dpm_solver_samples_0_0_3.mp4
-MoviePy - Writing audio in ./data10/concerts_audiovideo_dataset/model012000_out/model012000.pt/audios/dpm_solver_samples_0_0_3.wav
-MoviePy - Done.
-                            chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       frame_index:   0%|          | 0/16 [00:00<?, ?it/s, now=None]                                                             chunk:   0%|          | 0/13 [00:00<?, ?it/s, now=None]                                                       [rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_sample_sr_multiprocessing.py", line 349, in <module>
-[rank0]:     main()
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/./py_scripts/multimodal_sample_sr_multiprocessing.py", line 272, in main
-[rank0]:     sr_sample = sample_fn(
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/gaussian_diffusion.py", line 733, in ddim_sample_loop
-[rank0]:     for sample in self.ddim_sample_loop_progressive(
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/gaussian_diffusion.py", line 784, in ddim_sample_loop_progressive
-[rank0]:     out = self.ddim_sample(
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/gaussian_diffusion.py", line 642, in ddim_sample
-[rank0]:     out = self.p_mean_variance(
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/respace.py", line 92, in p_mean_variance
-[rank0]:     return super().p_mean_variance(self._wrap_model(model), *args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/gaussian_diffusion.py", line 261, in p_mean_variance
-[rank0]:     model_output = model(x, self._scale_timesteps(t), **model_kwargs) # when ddim, t is not mapped
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/respace.py", line 130, in __call__
-[rank0]:     return self.model(x, new_ts, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/image_unet.py", line 715, in forward
-[rank0]:     return super().forward(x, timesteps, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/image_unet.py", line 689, in forward
-[rank0]:     h = module(h, emb)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/MM-Diffusion/mm_diffusion/image_unet.py", line 76, in forward
-[rank0]:     x = layer(x)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
-[rank0]:     return self._conv_forward(input, self.weight, self.bias)
-[rank0]:   File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
-[rank0]:     return F.conv2d(
-[rank0]: RuntimeError: Input type (c10::Half) and bias type (float) should be the same
-E0428 19:41:01.404000 42813 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 42816) of binary: /home/users/ap794/finalCS590-text2audiovideo/venv/bin/python3
-Traceback (most recent call last):
-  File "/home/users/ap794/finalCS590-text2audiovideo/venv/bin/torchrun", line 8, in <module>
-    sys.exit(main())
-  File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
-    return f(*args, **kwargs)
-  File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
-    run(args)
-  File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
-    elastic_launch(
-  File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/users/ap794/finalCS590-text2audiovideo/venv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-./py_scripts/multimodal_sample_sr_multiprocessing.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-04-28_19:41:01
-  host      : compsci-cluster-fitz-08.cs.duke.edu.
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 42816)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
-srun: error: compsci-cluster-fitz-08: task 0: Exited with exit code 1

@@ -1,9 +1,9 @@
 #! /bin/bash
 
-MASTER_ADDR=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)
+MASTER_ADDR=localhost
 MASTER_PORT=${2-2012}
-NNODES=${SLURM_NNODES}
-NODE_RANK=${SLURM_NODEID}
+NNODES=1
+NODE_RANK=0
 GPUS_PER_NODE=4
 BASE_PATH=${1-"."}
 

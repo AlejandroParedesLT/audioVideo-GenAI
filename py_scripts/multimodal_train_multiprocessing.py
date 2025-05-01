@@ -57,6 +57,7 @@ def main():
 
     local_rank = setup()
     print(local_rank)
+    print('World Size perceived from torch distributed: ', torch.distributed.get_world_size())
     args = create_argparser().parse_args()
     args.video_size = [int(i) for i in args.video_size.split(',')]
     args.audio_size = [int(i) for i in args.audio_size.split(',')]

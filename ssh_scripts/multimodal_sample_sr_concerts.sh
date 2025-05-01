@@ -37,14 +37,16 @@ DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule linear
 SR_DIFFUSION_FLAGS="--sr_diffusion_steps 1000  --sr_sample_fn ddim  --sr_timestep_respacing ddim25"
 
 # Modify the following paths to your own paths
-#MULTIMODAL_MODEL_PATH="./data10/call_of_duty/debug/model002000.pt"
-#MULTIMODAL_MODEL_PATH=".//data10/concerts_audiovideo_dataset/debug/model010000.pt"
-MULTIMODAL_MODEL_PATH="./data10/concerts_audiovideo_dataset/debug/model012000.pt"
+
+# model002000 model004000 model006000 model008000 model010000 model012000 model014000 model016000 model018000 model020000
+
+MULTIMODAL_MODEL_PATH="./data10/concerts_audiovideo_dataset/debug/model020000.pt"
+
 # /data10/call_of_duty/debug/model005000.pt
 # /model007000.pt
 
 SR_MODEL_PATH="./data10/models/AIST++_SR.pt"
-OUT_DIR="./data10/concerts_audiovideo_dataset/model012000_out"
+OUT_DIR="./data10/concerts_audiovideo_dataset/model020000"
 REF_PATH="./data10/concerts_audiovideo_dataset/unittest"
 
 # --use-hwthread-cpus
