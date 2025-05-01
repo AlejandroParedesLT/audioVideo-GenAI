@@ -1,4 +1,4 @@
-# Multimodal Diffusion Model for Audio-Video Generation
+# Diffusion Models for Joint and Sequential Audio-Video Generation 
 
 This repository provides an implementation of advanced multimodal diffusion frameworks for synchronized audio-video generation, including MM-Diffusion and a novel two-step sequential pipeline combining CogVideoX for video and MM-Audio for audio generation.
 
